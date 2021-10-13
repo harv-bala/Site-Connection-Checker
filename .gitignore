@@ -68,6 +68,9 @@ instance/
 # SQLite stuff:
 *.db
 
+# macOS stuff
+.DS_Store
+
 # Scrapy stuff:
 .scrapy
 
