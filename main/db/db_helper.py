@@ -39,6 +39,8 @@ class DBHelper():
         # Removes a record based on matching domain name
         self.delete_record_sql = 'DELETE FROM websites WHERE domain="{}"'
 
+        self.create_table()
+
     def create_connection(self):
         connection = None
         try:
