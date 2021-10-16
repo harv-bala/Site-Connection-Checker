@@ -29,6 +29,8 @@ class DBHelper():
         # Read record by its domain name, used when getting a website's status
         self.read_record_sql = 'SELECT * FROM websites WHERE domain="{}"'
 
+        self.read_all_sql = 'SELECT * FROM websites'
+
         # If a website's status changes, this SQL will change the status for the
         # domain name given
         self.update_record_sql = '''UPDATE websites
@@ -83,6 +85,17 @@ class DBHelper():
         result = None
         try:
             cursor.execute(self.read_record_sql.format(domain))
+            result = cursor.fetchall()
+            return result
+        except Error as e:
+            print(f'The following error occurred: {e}')
+
+    def read_all_records(self):
+        connection = self.create_connection()
+        cursor = connection.cursor()
+        result = None
+        try:
+            cursor.execute(self.read_all_sql)
             result = cursor.fetchall()
             return result
         except Error as e:
