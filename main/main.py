@@ -19,14 +19,14 @@ def remove_from_database(url):
     webDB.delete_record(url)
 
 def get_interval():
-    filepath = str(Path('main/settings.json'))
+    filepath = str(Path('settings.json'))
     with open(filepath, 'r') as f:
         data = json.load(f)
     interval = data['settings'][0]['interval']
     return int(interval)
 
 def set_interval(interval):
-    filepath = str(Path('main/settings.json'))
+    filepath = str(Path('settings.json'))
     with open(filepath, 'r') as f:
         data = json.load(f)
 

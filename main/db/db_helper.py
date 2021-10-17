@@ -6,7 +6,7 @@ class DBHelper():
     def __init__(self) -> None:
         # Set the location of the database, as well as the filename. The Path class from pathlib automatically
         # corrects a path based on the OS. On Windows, this would change the '/' to a '\'.
-        self.db_path = Path('main/db/websiteDB.db')
+        self.db_path = Path('db/websiteDB.db')
 
         # Set the SQL pattern for creation of the 'websites' table. Status is set as an integer because
         # SQLite does not have a Boolean data type, so 0 and 1 act as True and False.
