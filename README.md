@@ -1,3 +1,6 @@
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/harv-bala/Site-Connection-Checker?include_prereleases)
+![GitHub](https://img.shields.io/github/license/harv-bala/Site-Connection-Checker?color=blue)
+
 # Site Connection Checker
 
 Site Connection Checker (SCC) is a command line tool which allows you to continuously check the status of any website(s).
