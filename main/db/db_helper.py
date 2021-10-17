@@ -116,9 +116,12 @@ class DBHelper():
     def delete_record(self, domain):
         connection = self.create_connection()
         cursor = connection.cursor()
-        try:
-            cursor.execute(self.delete_record_sql.format(domain))
-            connection.commit()
-            print('Deleted record')
-        except Error as e:
-            print(f'The following error occurred: {e}')
+        if self.read_record(domain):
+            try:
+                cursor.execute(self.delete_record_sql.format(domain))
+                connection.commit()
+                print('Deleted record')
+            except Error as e:
+                print(f'The following error occurred: {e}')
+        else:
+            print(f"The website '{domain}' does not exist")
