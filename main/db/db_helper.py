@@ -49,7 +49,6 @@ class DBHelper():
             # Creating a connection to the database, passing in the path attribute
             # The Path object much be cast to a strig when passed to the connect function
             connection = sqlite3.connect(str(self.db_path))
-            print('Connection to DB established')
         except Error as e:
             print(f'The following error occurred: {e}')
         return connection
@@ -74,7 +73,6 @@ class DBHelper():
             # .format() is used to insert the arguments into the pre-set SQL pattern
             cursor.execute(self.insert_record_sql.format(domain, 1))
             connection.commit()
-            print('Created new record')
         except Error as e:
             print(f'The following error occurred: {e}')
 
@@ -108,7 +106,6 @@ class DBHelper():
         try:
             cursor.execute(self.update_record_sql.format(status, domain))
             connection.commit()
-            print('Updated record')
         except Error as e:
             print(f'The following error occurred: {e}')
 
@@ -120,7 +117,6 @@ class DBHelper():
             try:
                 cursor.execute(self.delete_record_sql.format(domain))
                 connection.commit()
-                print('Deleted record')
             except Error as e:
                 print(f'The following error occurred: {e}')
         else:
