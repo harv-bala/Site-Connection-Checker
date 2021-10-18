@@ -68,6 +68,6 @@ For command-specific help:
 python main.py [command] -h
 ```
 
-# License
+## License
 
 This project is licensed under the MIT license.
