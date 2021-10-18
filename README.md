@@ -13,6 +13,13 @@ It is not uncommon to visit a website only to find that, for whatever reason, it
 
 Neither of these options are particularly ideal, which is why SCC exists. By automatically checking the status of any website(s) you request, at timed intervals you set, SCC can alert you as soon as a website is back online and connection is established.
 
+### Features
+
+- Automatically run status checks on any website(s)
+- Customisable status check time intervals
+- Create your own list of websites to be checked
+- Get alerts when websites on your list go back online
+
 ### Prerequisites
 
 SCC requires the requests library for Python. You can install it with Python's package manager, pip.
@@ -60,13 +67,6 @@ For command-specific help:
 ```shell
 python main.py [command] -h
 ```
-
-### Features
-
-- Automatically run status checks on any website(s)
-- Customisable status check time intervals
-- Create your own list of websites to be checked
-- Get alerts when websites on your list go back online
 
 # License
 
