@@ -9,7 +9,7 @@ class DBHelper():
         self.db_path = Path('db/websiteDB.db')
 
         # Set the SQL pattern for creation of the 'websites' table. Status is set as an integer because
-        # SQLite does not have a Boolean data type, so 0 and 1 act as True and False.
+        # SQLite does not have a Boolean data type, so 1 and 0 act as True and False.
         # 'domain' refers to the domain name of the website, e.g. https://www.google.com
         # 'status' refers to whether the website is live or down. 0 = Down, 1 = Live
         self.create_table_sql = '''CREATE TABLE IF NOT EXISTS websites (
