@@ -44,6 +44,20 @@ def print_results():
         elif result[2] == 0:
             print(f'{result[1]:<34} [ERROR]')
 
+def print_sites():
+    webDB = DBHelper()
+    results = webDB.read_all_records()
+    print('Current stored sites: \n')
+    for result in results:
+        print(result[1])
+
+def print_sites_verbose():
+    webDB = DBHelper()
+    results = webDB.read_all_records()
+    print(f'Here are the sites you currently have stored. There are {len(results)} sites: \n')
+    for i in range(len(results)):
+        print(f'Site {i + 1}: {results[i][1]}')
+
 def main():
     webDB = DBHelper()
     interval = get_interval()
@@ -69,11 +83,15 @@ if __name__ == '__main__':
     subparser = parser.add_subparsers(dest='command')
     database = subparser.add_parser('database', help='Perform database operations')
     interval = subparser.add_parser('interval', help='Change the check time interval')
+    listSites = subparser.add_parser('list', help='List all websites stored in the database')
     start = subparser.add_parser('start', help='Start the program')
 
     db_group = database.add_mutually_exclusive_group()
     db_group.add_argument('-a', '--add', metavar='', help='Add to DB')
     db_group.add_argument('-r', '--remove', metavar='', help='Remove from DB')
+
+    list_group = listSites.add_mutually_exclusive_group()
+    list_group.add_argument('-v', '--verbose', help='Output a more verbose list of websites', action='store_true')
 
     interval.add_argument('-c', '--change', metavar='', type=int, help='Change the check time interval', required=True)
 
@@ -89,5 +107,10 @@ if __name__ == '__main__':
     elif args.command == 'interval':
         set_interval(args.change)
         print('Changed interval time to', args.change, 'seconds')
+    elif args.command == 'list':
+        if args.verbose:
+            print_sites_verbose()
+        else:
+            print_sites()
     else:
         print('Enter a valid command. Use -h or --help for help.')
