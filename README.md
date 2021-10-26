@@ -51,6 +51,16 @@ python main.py database -a [URL]
 python main.py database -r [URL]
 ```
 
+#### Output your stored websites
+Standard output
+```shell
+python main.py list
+```
+Verbose (extended) output
+```shell
+python main.py list -v
+```
+
 #### Change the time interval between checks
 ```shell
 python main.py interval -c [value]
