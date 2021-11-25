@@ -13,7 +13,6 @@ class StatusChecker():
         try:
             # Send HTTP GET request to the given url
             response = requests.get(self.url)
-            print(response.status_code)
             # Response codes of the format 5xx are server errors.
             # This would indicate that the website is down,
             # hence status is set to false (Down)
