@@ -71,6 +71,9 @@ instance/
 # macOS stuff
 .DS_Store
 
+# vscode stuff
+.vscode
+
 # Scrapy stuff:
 .scrapy
 
