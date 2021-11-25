@@ -86,7 +86,7 @@ def main():
     '''continuously check status of stored websites unless interrupted'''
     web_db = DBHelper()
     time_interval = get_interval()
-    print_results()
+    print('PROGRAM STARTED')
 
     try:
         while True:
