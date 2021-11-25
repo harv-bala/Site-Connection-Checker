@@ -1,7 +1,7 @@
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/harv-bala/Site-Connection-Checker?include_prereleases)
-![GitHub issues](https://img.shields.io/github/issues/harv-bala/Site-Connection-Checker)
-![GitHub closed issues](https://img.shields.io/github/issues-closed/harv-bala/Site-Connection-Checker)
-![GitHub](https://img.shields.io/github/license/harv-bala/Site-Connection-Checker?color=blue)
+![GitHub issues](https://img.shields.io/github/issues/harv-bala/Site-Connection-Checker?color=ff0a2f)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/harv-bala/Site-Connection-Checker?color=9274dd)
+![GitHub](https://img.shields.io/github/license/harv-bala/Site-Connection-Checker?color=0a74ff)
 
 # Site Connection Checker
 
