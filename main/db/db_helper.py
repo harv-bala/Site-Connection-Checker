@@ -55,7 +55,7 @@ class DBHelper():
         try:
             # Creating a connection to the database,
             # passing in the path attribute
-            # The Path object much be cast to a strig
+            # The Path object much be cast to a string
             # when passed to the connect function
             connection = sqlite3.connect(str(self.db_path))
         except Error as error:
