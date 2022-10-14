@@ -77,7 +77,3 @@ For command-specific help:
 ```shell
 python main.py [command] -h
 ```
-
-## License
-
-This project is licensed under the MIT license.
